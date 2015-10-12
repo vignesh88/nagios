@@ -15,15 +15,15 @@ def xml_check():
             try:
                 parsefile(filename)
                 print "%s is well-formed" % filename
-			#sys.exit(0)
+	        sys.exit(0)
             except Exception, e:
                 print "%s is %s" % (filename, e)
-			#sys.exit(2)
+		sys.exit(2)
 
 LOG_FILE = sys.argv[1]
 if os.path.isfile(LOG_FILE):
    xml_check()
 else:
    print LOG_FILE ,"- does not exist"
-   #sys.exit(2)
+   sys.exit(2)
 
